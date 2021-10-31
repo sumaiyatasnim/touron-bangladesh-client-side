@@ -9,7 +9,7 @@ const AddServices = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/addServices', data)
+        axios.post('https://spooky-ghost-52974.herokuapp.com/addServices', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');
