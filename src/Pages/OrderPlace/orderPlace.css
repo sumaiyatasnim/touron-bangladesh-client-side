@@ -12,3 +12,6 @@
 .error{
     color: red;
 }
+.body{
+    height: 100vh;
+}

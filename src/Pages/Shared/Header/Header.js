@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
+import logo from "../../../Images/Logo/logo.png"
+import './header.css'
 
 
 import { HashLink } from 'react-router-hash-link';
@@ -14,7 +15,7 @@ const Header = () => {
         <>
             <Navbar bg="light" variant="light" sticky="top" collapseOnSelect expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home"> <img className="img-fluid logo" src="" alt="" /> </Navbar.Brand>
+                    <Navbar.Brand href="#home"> <img className="img-fluid logo" src={logo} alt="" /> </Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
@@ -34,6 +35,7 @@ const Header = () => {
                             <div></div>} */}
 
                         <Nav.Link as={HashLink} to="/addServices">Add Service</Nav.Link>
+                        <Nav.Link as={HashLink} to="/contact">Contact Us</Nav.Link>
 
                         {user?.email ?
                             <Button onClick={logOut} variant="info">Logout</Button>

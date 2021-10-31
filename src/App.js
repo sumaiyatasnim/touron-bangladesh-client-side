@@ -10,6 +10,8 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import OrderPlace from './Pages/OrderPlace/OrderPlace';
 import MyOrder from './Pages/MyOrder/MyOrder';
 import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
+import Footer from './Pages/Footer/Footer';
+import Contact from './Pages/Contact/Contact';
 
 function App() {
   return (
@@ -41,8 +43,11 @@ function App() {
           <Route exact path="/login">
             <Login></Login>
           </Route>
-
+          <Route exact path="/contact">
+            <Contact></Contact>
+          </Route>
         </Switch>
+        <Footer></Footer>
       </BrowserRouter>
     </div>
   );

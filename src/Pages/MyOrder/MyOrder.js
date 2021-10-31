@@ -10,7 +10,7 @@ const MyOrder = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrder/${user.email}`)
+        fetch(`https://spooky-ghost-52974.herokuapp.com/${user.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setMyOrder(data);
@@ -42,7 +42,7 @@ const MyOrder = () => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
 
-            const url = `http://localhost:5000/myOrder/${id}`;
+            const url = `https://spooky-ghost-52974.herokuapp.com/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
