@@ -38,24 +38,24 @@ const MyOrder = () => {
     //     }
     // }
 
-    const handleDeleteOrder = id => {
-        const proceed = window.confirm('Are you sure, you want to delete?');
-        if (proceed) {
+    // const handleDeleteOrder = id => {
+    //     const proceed = window.confirm('Are you sure, you want to delete?');
+    //     if (proceed) {
 
-            const url = `https://spooky-ghost-52974.herokuapp.com/${id}`;
-            fetch(url, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    if (data.deletedCount > 0) {
-                        alert('deleted successfully');
-                        const remainingUsers = myOrder.filter(order => order._id !== id);
-                        setMyOrder(remainingUsers);
-                    }
-                });
-        }
-    }
+    //         const url = `https://spooky-ghost-52974.herokuapp.com/${id}`;
+    //         fetch(url, {
+    //             method: 'DELETE'
+    //         })
+    //             .then(res => res.json())
+    //             .then(data => {
+    //                 if (data.deletedCount > 0) {
+    //                     alert('deleted successfully');
+    //                     const remainingUsers = myOrder.filter(order => order._id !== id);
+    //                     setMyOrder(remainingUsers);
+    //                 }
+    //             });
+    //     }
+    // }
     return (
         <div>
 
@@ -83,7 +83,7 @@ const MyOrder = () => {
                                 <td>{order.city}</td>
                                 <td>{order.order.name}</td>
                                 <td>{order.order.price}</td>
-                                <td><button onClick={() => handleDeleteOrder(myOrder._id)} className="btn btn-dark ">X</button></td>
+                                {/* <td><button onClick={() => handleDeleteOrder(myOrder._id)} className="btn btn-dark ">X</button></td> */}
                             </tr>
                         </tbody>
                     </table>

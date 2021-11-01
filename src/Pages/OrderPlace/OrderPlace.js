@@ -11,7 +11,7 @@ const OrderPlace = () => {
     const { user } = useFirebase();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     useEffect(() => {
-        fetch(`https://spooky-ghost-52974.herokuapp.com/${serviceId}`)
+        fetch(`https://spooky-ghost-52974.herokuapp.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, []);
