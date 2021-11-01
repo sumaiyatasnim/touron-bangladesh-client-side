@@ -37,9 +37,9 @@ function App() {
           {/* <PrivateRoute exact path="/manageOrders">
             <ManageAllOrders></ManageAllOrders>
           </PrivateRoute> */}
-          <Route exact path="/addServices">
+          <PrivateRoute exact path="/addServices">
             <AddServices></AddServices>
-          </Route>
+          </PrivateRoute>
           <Route exact path="/login">
             <Login></Login>
           </Route>
